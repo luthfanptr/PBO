@@ -21,7 +21,7 @@ public class RestoranTugas {
 
         do {
             System.out.println("\nSelamat Datang Di Restoran Mini Luthfan");
-            System.out.println("================================");
+            System.out.println("========================================");
             System.out.println("Silakan Pilih Menu:");
             System.out.println("1. Makanan");
             System.out.println("2. Minuman");
