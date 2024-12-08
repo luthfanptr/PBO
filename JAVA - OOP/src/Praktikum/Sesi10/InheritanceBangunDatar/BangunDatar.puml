@@ -1,0 +1,35 @@
+@startuml BangunDatar
+
+class Main{
+    + main(): void 
+}
+
+class BangunDatar{
+    + luas(): float 
+    + keliling(): float
+}
+
+class Persegi{
+    + sisi: float
+}
+
+class Lingkaran{
+    + r: float 
+}
+
+class PersegiPanjang{
+    + panjang: float
+    +lebar: float
+}
+
+class Segitiga{
+    + alas: float
+    +tinggi: float
+}
+
+BangunDatar <|-- Persegi 
+BangunDatar <|-- Lingkaran
+BangunDatar <|-- PersegiPanjang
+BangunDatar <|-- Segitiga
+
+@enduml
