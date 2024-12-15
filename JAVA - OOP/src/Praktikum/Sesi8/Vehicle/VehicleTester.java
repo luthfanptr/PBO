@@ -1,6 +1,6 @@
 package Praktikum.Sesi8.Vehicle;
-
 //Inheritance dengan Konstruktor Superclass dan Method Overloading
+
 //Superclass
 class Vehicle {
     String brand;

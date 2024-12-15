@@ -1,4 +1,5 @@
 package Praktikum.Sesi8.Animal;
+//Inheritance dengan konstruktor Superclass dan Method Overriding
 
 //Superclass
 class Animal{
