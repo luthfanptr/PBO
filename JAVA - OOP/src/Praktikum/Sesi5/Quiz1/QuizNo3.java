@@ -1,4 +1,4 @@
-package Praktikum.Sesi5;
+package Praktikum.Sesi5.Quiz1;
 
 import java.util.Scanner;
 
