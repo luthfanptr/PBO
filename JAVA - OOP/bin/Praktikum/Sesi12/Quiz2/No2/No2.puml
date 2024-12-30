@@ -1,0 +1,35 @@
+@startuml No2
+
+interface transportasi {
+    + idz : int 
+    --
+    + tampil() : void 
+    + setData() : void
+    + getId() : int
+}
+
+class Gojek {
+    - harga : int
+    - id : int
+    --
+    ~ tampil() : void
+    ~ setData() : void
+}
+
+class bayar {
+    - jarak : int
+    - total : int
+    - nama : String
+    --
+    + bayar()
+    + bayar(int : id)
+    ~ tampil() : void
+    ~ setData() : void
+    + getId() : int
+}
+
+transportasi <|.. Gojek
+
+Gojek <|-- bayar
+
+@enduml

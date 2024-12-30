@@ -1,0 +1,32 @@
+@startuml no1
+
+class Dosen {
+    - nik : String 
+    - nama : String
+    --
+    + Dosen(String nik, String nama)
+    +String getNik()
+    + String getNama()
+    + void view()
+}
+
+class Rektor {
+    - tahunMasuk : int
+    --
+    + Rektor(String nik, String nama, int tahunMasuk)
+    + getTahunMasuk() : int
+    + viewRektor() : void
+}
+
+class Dekan {
+    - Fakultas : String
+    --
+    + Dekan(String nik, String nama, String fakultas)
+    + getFakultas() : String
+    + viewDekan() : void
+}
+
+Dosen <|-- Rektor
+Dosen <|-- Dekan
+
+@enduml

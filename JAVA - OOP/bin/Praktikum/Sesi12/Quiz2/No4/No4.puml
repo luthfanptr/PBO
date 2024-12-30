@@ -1,0 +1,61 @@
+@startuml animal
+
+abstract class Animal {
+    nama : String 
+    sifat : String 
+    ukuran : Int 
+    --
+    setNama(); getNama();
+    setUkuran(); getUkuran();
+    setSifat(); getSifat();
+}
+
+class Mamalia {
+    jalan : String 
+    jenisMamalia : String 
+    bisaJalan : Boolean
+    jumlahKaki : Int 
+    --
+    Mamalia();
+    Mamalia(String nama);
+    setBisaJalan(); getBisaJalan();
+    setJumlahKaki(); getJumlahKaki();
+    setJenisMamalia(); getJenisMamalia();
+}
+
+class Aves {
+    jenisAves : String
+    terbang : String
+    bisaTerbang : Boolean
+    --
+    Aves();
+    Aves(String nama, double ukuran);
+    setBisaTerbang(): getBisaTerbang();
+    setJenisAves(); getJenisAves();
+}
+
+class Ayam {
+    jenisAyam : String
+    adu : String
+    bisaDiadu : Boolean
+    --
+    Ayam();
+    Ayam(String nama, double ukuran);
+    setJenisAyam(); getJenisAyam();
+    setBisaDiadu(); getBisaDiadu();
+}
+
+class Merpati {
+    
+
+    --
+    Merpati();
+    merpati(String nama, double ukuran);
+    setBisaTerbang(); getBisaTerbang();
+}
+
+Animal <-- Mamalia 
+Animal <-- Aves  
+Aves <-- Ayam
+Aves <-- Merpati
+@enduml

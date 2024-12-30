@@ -1,0 +1,72 @@
+@startuml phone 
+
+class PhoneUser {
+    - phone : String 
+    --
+    + turnOnThePhone()
+    + turnOffThePhone()
+    + makePhoneLouder()
+    + makePhoneSilent()
+}
+
+interface Phone {
+    + MAX_VOLUME
+    + MIN_VOLUME
+    --
+    + powerOn()
+    + powerOff()
+    + volumeUp()
+    + volumeDown()
+}
+
+class Xiaomi {
+    - volume : int 
+    - isPowerOn : boolean
+    --
+    + powerOn()
+    + powerOff()
+    + volumeUp()
+    + volumeDown()
+    + getVolume()
+}
+
+class iPhone {
+    - volume : int 
+    - isPowerOn : boolean 
+    --
+    + powerOn()
+    + powerOff()
+    + volumeUp()
+    + volumeDown()
+    + getVolume()
+}
+
+class Samsung {
+    - volume : int 
+    - isPowerOn : boolean
+    --
+    + powerOn()
+    + powerOff()
+    + volumeUp()
+    + volumeDown()
+    + getVolume()
+}
+
+class Oppo {
+    - volume : int
+    - isPowerOn : boolean
+    --
+    + powerOn()
+    + powerOff()
+    + volumeUp()
+    + volumeDown()
+    + getVolume()
+}
+
+PhoneUser ..> Phone
+Phone <|-- Xiaomi
+Phone <|-- iPhone
+Phone <|-- Samsung
+Phone <|-- Oppo
+
+@enduml
