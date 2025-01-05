@@ -1,18 +1,24 @@
 package Praktikum.Sesi12.Quiz2.No2;
 
 interface Transportasi {
-    int getId();
     void tampil();
     void setData();
+    int getId();
 }
 
 class Gojek implements Transportasi {
-    private int harga;
     private int id;
+    private int harga;
 
     public Gojek() {
-        this.harga = 0;
         this.id = 0;
+        this.harga = 0;
+    }
+
+    @Override
+    public void tampil() {
+        System.out.println("ID : " + id);
+        System.out.println("Harga : " + harga);
     }
 
     @Override
@@ -21,16 +27,9 @@ class Gojek implements Transportasi {
     }
 
     @Override
-    public void tampil() {
-        System.out.println("ID: " + id);
-        System.out.println("Harga: " + harga);
-    }
-
-    @Override
     public void setData() {
-        // Contoh set data
         this.id = 1;
-        this.harga = 15000;
+        this.harga = 20000;
     }
 }
 
@@ -46,18 +45,18 @@ class Bayar extends Gojek {
     }
 
     public Bayar(int id) {
-        super();
-        this.setData(); // Set data dari Gojek
+        super(); // memanggil konstruktor parent class
+        this.setData();
         this.nama = "Pengguna " + id;
-        this.jarak = 10; // Contoh jarak default
+        this.jarak = 10;
         this.total = this.jarak * 2000 + super.getId() * 100;
     }
 
     @Override
     public void tampil() {
         super.tampil();
-        System.out.println("Nama: " + nama);
-        System.out.println("Jarak: " + jarak + " km");
+        System.out.println("Nama : " + nama);
+        System.out.println("Jarak: " + jarak + " KM");
         System.out.println("Total: Rp " + total);
     }
 
@@ -65,7 +64,7 @@ class Bayar extends Gojek {
     public void setData() {
         super.setData();
         this.jarak = 10;
-        this.nama = "Anonim";
+        this.nama = "Amorim";
         this.total = this.jarak * 2000;
     }
 }
