@@ -6,6 +6,5 @@ public class StaffTester {
         s.kirimEmail("a@test.com", "info test", "isi email");
         System.out.println("NIP  : " +s.getNIP() + "\n" + "Nama  : " + s.getNama() + "\n" + 
         "Bagian  : " +s.getBagian());
-    }
-    
+    }   
 }
