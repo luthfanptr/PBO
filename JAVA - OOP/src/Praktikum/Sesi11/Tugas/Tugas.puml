@@ -1,0 +1,39 @@
+@startuml tugas
+
+Abstract Kendaraan {
+    - String nama
+    --
+    + Kendaraan (String nama)
+    + abstract double hitungHargaSewa (int hari)
+    + String getNama()
+}
+
+Interface Asuransi {
+    + double hitungBiayaAsuransi (int hari)
+}
+
+Class Mobil {
+    - String jenisBahanBakar
+    --
+    + Mobil (String nama, String jenisBahanBakar)
+    + double hitungHargaSewa (int hari)
+    + double hitungBiayaAsuransi (int hari)
+    + String toString()
+}
+
+Class Motor {
+    - int kapasitasMesin
+    --
+    + Motor (String nama, int kapasitasMesin)
+    + double hitungHargaSewa (int hari)
+    + double hitungBiayaAsuransi (int hari)
+    + String toString()
+}
+
+Kendaraan <|-- Mobil
+Kendaraan <|-- Motor
+Asuransi <|.. Mobil
+Asuransi <|.. Motorqq
+
+
+@enduml
